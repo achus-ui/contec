@@ -17,12 +17,118 @@
                 }
             }
         }
+        &.show-close {
+            span {
+                &:nth-child(1) {
+                    transform: rotateZ(50deg);
+                }
+                &:nth-child(2) {
+                    transform: rotateZ(-50deg) translate3d(6px, -6px, 0);
+                }
+                &:nth-child(3) {
+                    opacity: 0;
+                }
+            }
+        }
         span {
             display: block;
             width: 35px;
             height: 5px;
             background: $primary-color;
             @include transitions(all, 0.8s, cubic-bezier(.2, 1, .3, 1));
+        }
+    }
+}
+
+.menus-holder {
+    width: calc(100% - 190px);
+    height: 100vh;
+    @include positioning(fixed, $top: 0, $right: 0);
+    z-index: 9;
+    padding: 0 300px;
+    @extend %disFlex;
+    justify-content: space-between;
+    align-items: center;
+    color: $agent-color-1;
+    background: url(../img/menus/home.jpg) left center no-repeat;
+    background-size: cover;
+    transform: translateX(-120%);
+    @include transitions(all, 0.8s, cubic-bezier(.2, 1, .3, 1));
+    &.show-menus {
+        transform: translateX(0);
+        @include transitions(all, 0.8s, cubic-bezier(.2, 1, .3, 1));
+    }
+    &.home-bg {
+        background: url(../img/menus/home.jpg) left center no-repeat;
+        background-size: cover;
+        @include transitions(all, 0.8s, cubic-bezier(.2, 1, .3, 1));
+    }
+    &.about-bg {
+        background: url(../img/menus/about.jpg) left center no-repeat;
+        background-size: cover;
+        @include transitions(all, 0.8s, cubic-bezier(.2, 1, .3, 1));
+    }
+    &.services-bg {
+        background: url(../img/menus/services.jpg) left center no-repeat;
+        background-size: cover;
+        @include transitions(all, 0.8s, cubic-bezier(.2, 1, .3, 1));
+    }
+    &.latest-work-bg {
+        background: url(../img/menus/latest-work.jpg) left center no-repeat;
+        background-size: cover;
+        @include transitions(all, 0.8s, cubic-bezier(.2, 1, .3, 1));
+    }
+    &.meet-team-bg {
+        background: url(../img/menus/meet-the-team.jpg) left center no-repeat;
+        background-size: cover;
+        @include transitions(all, 0.8s, cubic-bezier(.2, 1, .3, 1));
+    }
+    &.testomonials-bg {
+        background: url(../img/menus/testimonials.jpg) left center no-repeat;
+        background-size: cover;
+        @include transitions(all, 0.8s, cubic-bezier(.2, 1, .3, 1));
+    }
+    &.contact-bg {
+        background: url(../img/menus/contact.jpg) left center no-repeat;
+        background-size: cover;
+        @include transitions(all, 0.8s, cubic-bezier(.2, 1, .3, 1));
+    }
+    h3 {
+        font-size: fontSize(10px);
+        font-weight: fontWeight(300);
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        &.menus {
+            li {
+                font-size: fontSize(20px);
+                font-weight: fontWeight(300);
+                color: $agent-color-1;
+                text-transform: uppercase;
+                @include transitions(all, 0.8s, cubic-bezier(.2, 1, .3, 1));
+                cursor: pointer;
+                @include translate(0, 0, 0);
+                &:hover {
+                    color: $quinary-color;
+                    @include transitions(all, 0.8s, cubic-bezier(.2, 1, .3, 1));
+                    @include translate(20px, 0, 0);
+                }
+                &.active {
+                    color: $quinary-color;
+                    &:hover {
+                        @include translate(0, 0, 0);
+                    }
+                }
+            }
+        }
+        &.social-icons-menus {
+            li {
+                display: inline-block;
+                margin-right: 10px;
+                cursor: pointer;
+            }
         }
     }
 }
