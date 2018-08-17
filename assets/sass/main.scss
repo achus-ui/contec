@@ -1,0 +1,37 @@
+@import "base/colors";
+@import "base/typography";
+@import "helpers/mixins";
+@import "helpers/checkbox";
+@import "helpers/radio";
+@import "helpers/spacing";
+@import "components/sidenav";
+@import "components/home";
+@import "components/contactus";
+@import "components/services";
+@import "components/projects";
+@import "components/our-team";
+@import "components/project-form";
+@import "components/map-info";
+
+* {
+    outline: none; // border: 1px solid;
+}
+
+input,
+textarea,
+select,
+a {
+    &:focus,
+    &:hover,
+    &:active {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+body {
+    margin: auto;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-weight: fontWeight(0);
+}

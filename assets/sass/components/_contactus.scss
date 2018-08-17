@@ -1,0 +1,46 @@
+.contact-us-desc-holder {
+    width: calc(100% - 190px);
+    height: 100vh;
+    float: right;
+    @extend %disFlex;
+    align-items: center;
+    justify-content: center;
+    .wrapper {
+        flex-basis: 80%;
+        height: 100vh;
+        @extend %disFlex;
+        align-items: center;
+        justify-content: space-between;
+        .content {
+            flex-basis: 60%;
+            h1 {
+                color: $primary-color;
+            }
+            p {
+                color: #676666;
+                font-size: fontSize(2px);
+            }
+            button {
+                background: $agent-color-1;
+                border: 2px solid $primary-color;
+                color: $primary-color;
+                @include border-radius(30px);
+                font-size: fontSize(3px);
+                font-family: 'Roboto Mono', monospace;
+                font-weight: fontWeight(0);
+                padding: 10px 50px;
+                text-transform: uppercase;
+                @include transitions(all, 0.3s, cubic-bezier(.2, 1, .3, 1));
+                box-shadow: none;
+                &:hover {
+                    background: $primary-color;
+                    color: $agent-color-1;
+                    @include transitions(all, 0.3s, cubic-bezier(.2, 1, .3, 1));
+                }
+            }
+        }
+        img {
+            align-self: flex-end;
+        }
+    }
+}

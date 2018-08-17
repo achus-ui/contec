@@ -1,0 +1,121 @@
+.project-form {
+    width: calc(100% - 190px);
+    height: 100vh;
+    float: right;
+    @extend %disFlex;
+    align-items: center;
+    justify-content: flex-start;
+    .wrapper {
+        flex-basis: 96%;
+        height: 100%;
+        @extend %disFlex;
+        justify-content: flex-start;
+        .holder {
+            width: 100%;
+            position: relative;
+            background: #fafafa url(../img/contec-tag-animation.png) center bottom no-repeat;
+            .copyright {
+                @include positioning(absolute, $left: 135px, $bottom: 0);
+                font-weight: fontWeight(0);
+                font-size: fontSize(-2px);
+            }
+            h2 {
+                font-size: fontSize(24px);
+                font-weight: fontWeight(-100);
+                position: relative;
+                margin: 0;
+                padding: 0;
+                &:before {
+                    content: "";
+                    width: 10%;
+                    height: 3px;
+                    background: $quinary-color;
+                    @include positioning(absolute, $left: 0, $bottom: -15px);
+                }
+            }
+            h3 {
+                font-size: fontSize(2px);
+                font-weight: fontWeight(-100);
+            }
+            .form-wrapper {
+                input,
+                textarea {
+                    border: 0;
+                    background: $primary-color;
+                    @include border-radius(0);
+                    color: $agent-color-1;
+                    padding: 30px 20px;
+                }
+                textarea {
+                    padding-top: 10px;
+                    height: 150px;
+                }
+                .dropdown-holder {
+                    position: relative;
+                    margin-bottom: 1rem;
+                    .selected-item {
+                        height: 60px;
+                        @extend %disFlex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0 20px;
+                        background: $primary-color;
+                        color: $agent-color-1;
+                        cursor: pointer;
+                        &.open {
+                            &+.items {
+                                @include scale(1, 1, 1);
+                                @include transitions(all, 0.5s, cubic-bezier(.2, 1, .3, 1));
+                            }
+                        }
+                    }
+                    .items {
+                        width: 100%;
+                        height: auto;
+                        padding: 0;
+                        background: $agent-color-1;
+                        list-style: none;
+                        margin: 0;
+                        @include positioning(absolute, $left: 0, $top: 60px);
+                        z-index: 9;
+                        @include scale(1, 0, 1);
+                        @include transitions(all, 0.5s, cubic-bezier(.2, 1, .3, 1));
+                        transform-origin: top;
+                        li {
+                            font-family: 'Roboto Mono', monospace;
+                            font-weight: fontWeight(0);
+                            font-size: fontSize(-2px);
+                            padding: 10px 15px;
+                            cursor: pointer;
+                            &:hover {
+                                background: $secondary-color;
+                                color: $agent-color-1;
+                                @include transitions(all, 0.5s, cubic-bezier(.2, 1, .3, 1));
+                                i {
+                                    opacity: 1;
+                                    margin-right: 10px;
+                                    color: $agent-color-1;
+                                    @include transitions(all, 0.5s, cubic-bezier(.2, 1, .3, 1));
+                                }
+                            }
+                            i {
+                                opacity: 0;
+                                color: $agent-color-1;
+                                font-size: fontSize(-6px);
+                                @include transitions(all, 2s, cubic-bezier(.2, 1, .3, 1));
+                            }
+                            &.active {
+                                background: $secondary-color;
+                                color: $agent-color-1;
+                                i {
+                                    opacity: 1;
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
