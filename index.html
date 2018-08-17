@@ -26,14 +26,14 @@
     </aside>
 
     <section class="menus-holder home-bg">
-        <ul class="menus">
-            <li class="active">home</li>
-            <li>about</li>
-            <li>services</li>
-            <li>latest work</li>
-            <li>meet the team</li>
-            <li>testimonials</li>
-            <li>contact</li>
+        <ul id="menus" class="menus">
+            <li data-menuanchor="firstPage" class="active"><a href="#firstPage">home</a></li>
+            <li data-menuanchor="secondPage"><a href="#secondPage">about</a></li>
+            <li data-menuanchor="3rdPage"><a href="#3rdPage">services</a></li>
+            <li data-menuanchor="4thpage"><a href="#4thpage">latest work</a></li>
+            <li data-menuanchor="5thpage"><a href="#5thpage">meet the team</a></li>
+            <li data-menuanchor="6thpage"><a href="#6thpage">testimonials</a></li>
+            <li data-menuanchor="7thpage"><a href="#7thpage">project form</a></li>
         </ul>
         <div class="address-sec">
             <h3>Address</h3>
@@ -62,9 +62,9 @@
 
     <div id="fullpage">
 
-        <section class="section home">
+        <section id="section0" class="section home active">
             <div class="video-slider">
-                <!-- <img src="assets/img/contec-tag-animation.png" class="tag-animation" alt=""> -->
+                <img src="assets/img/contec-tag-animation.png" class="tag-animation" alt="">
                 <div class="slider-item">
                     <div class="video-info">
                         <p class="m-t-15">Get your properties moving. Providing a "One Stop Shop" for all your marketing needs, at a competitive price, supported by
@@ -96,7 +96,7 @@
             </div>
         </section>
 
-        <section class="section contact-us-desc-holder">
+        <section id="section1" class="section contact-us-desc-holder">
             <div class="wrapper">
                 <div class="content p-l-100">
                     <h1 class="m-b-45">‘A Digital Marketing and Software Company with a personal touch and a Service driven philosophy’</h1>
@@ -107,7 +107,7 @@
                     <p class="m-b-30">We don’t see a ‘one-size-fitsall’ approach to SEO, Content Marketing, Social Media or Design it should be tailor made
                         for you!
                     </p>
-                    <p class="m-b-30">Our innovative digital marketing methods will help to anticipate the intent of your customers and search engines. If
+                    <p class="m-b-10">Our innovative digital marketing methods will help to anticipate the intent of your customers and search engines. If
                         you want clean, honest and service driven tangible results online then get in touch now to see how we can help.</p>
                     <button class="btn btn-primary">contact us</button>
                 </div>
@@ -115,9 +115,9 @@
             </div>
         </section>
 
-        <section class="section services">
+        <section id="section2" class="section services">
             <div class="wrapper">
-                <div class="tiles-holder p-l-30 p-t-30 p-r-30 p-b-30">
+                <div class="tiles-holder p-l-30 p-t-30 p-r-30 p-b-0">
                     <ul>
                         <li class="service-animate">
                             <img src="assets/img/service-icons/web-dev.png" alt="">
@@ -211,7 +211,7 @@
             </div>
         </section>
 
-        <section class="section projects">
+        <section id="section3" class="section projects">
             <div class="wrapper">
                 <div class="tiles-holder">
                     <ul>
@@ -232,7 +232,7 @@
             </div>
         </section>
 
-        <section class="section our-team">
+        <section id="section4" class="section our-team">
             <div class="wrapper">
                 <div class="holder p-t-80 p-l-120 p-r-100">
                     <h2 class="m-b-60">Get to know us</h2>
@@ -280,7 +280,7 @@
             </div>
         </section>
 
-       <section class="section map-info">
+       <section id="section5" class="section map-info">
             <div class="wrapper">
                 <div class="holder">
                     <div id="map"></div>
@@ -310,7 +310,7 @@
             </div>
         </section>
 
-        <section class="section project-form">
+        <section id="section6" class="section project-form">
             <div class="wrapper">
                 <div class="holder p-t-80 p-l-120 p-r-120 p-b-100">
                     <p class="copyright">Coptyright© CONTEC DIGITAL LTD 2018</p>
@@ -337,7 +337,7 @@
                             <div class="row">
                                 <div class="col-md">
                                     <div class="dropdown-holder">
-                                        <div class="selected-item open">
+                                        <div class="selected-item">
                                             <span>Business Selector</span>
                                             <i class="fas fa-sort-down"></i>
                                         </div>
@@ -415,6 +415,7 @@
                 </div>
             </div>
         </section>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -431,6 +432,9 @@
             $('#fullpage').fullpage({
                 navigation: false,
                 slidesNavigation: false,
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage'],
+                menu: '#menus',
+                lazyLoad: true
             });
             var owl = $('.our-team-slider');
             owl.owlCarousel({

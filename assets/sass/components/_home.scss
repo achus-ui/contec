@@ -110,7 +110,7 @@
             color: $primary-color;
             font-family: 'Roboto Mono', monospace;
             font-weight: fontWeight(300);
-            font-size: fontSize(2px);
+            font-size: fontSize(0);
             position: relative;
             i {
                 @include positioning(absolute, $top: 4px, $left: -30px);
@@ -134,15 +134,15 @@
         .chat-icon {
             position: relative;
             img {
-                width: 80px;
-                height: 80px;
+                width: 60px;
+                height: 60px;
                 @include border-radius(50%);
                 object-fit: cover;
             }
             .chat-welcome {
                 width: 230px;
                 background: $primary-color;
-                @include positioning(absolute, $left: -240px, $top: 7px);
+                @include positioning(absolute, $left: -240px, $top: 0);
                 color: $agent-color-1;
                 font-size: fontSize(2px);
                 padding: 10px;

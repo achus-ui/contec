@@ -13,10 +13,12 @@
     }
     .wrapper {
         width: 96%;
+        height: 100%;
         @extend %disFlex;
         justify-content: flex-start;
         .holder {
             width: 100%;
+            height: 100%;
             position: relative;
             background: $secondary-color;
             &:before {
@@ -42,6 +44,7 @@
             }
             .owl-carousel {
                 display: flex !important;
+                height: 100%;
                 .owl-nav {
                     @include positioning(absolute, $top: 120px, $right: 0);
                     button {

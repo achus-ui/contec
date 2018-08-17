@@ -1,6 +1,5 @@
 .contact-us-desc-holder {
     width: calc(100% - 190px);
-    height: 100vh;
     float: right;
     @extend %disFlex;
     align-items: center;
@@ -13,12 +12,12 @@
     }
     .wrapper {
         flex-basis: 80%;
-        height: 100vh;
+        height: 100%;
         @extend %disFlex;
         align-items: center;
         justify-content: space-between;
         .content {
-            flex-basis: 60%;
+            flex-basis: 70%;
             h1 {
                 color: $primary-color;
             }
@@ -47,6 +46,7 @@
         }
         img {
             align-self: flex-end;
+            height: 420px;
         }
     }
 }

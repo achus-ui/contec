@@ -12,7 +12,6 @@
 @import "components/our-team";
 @import "components/project-form";
 @import "components/map-info";
-
 * {
     outline: none; // border: 1px solid;
 }
@@ -27,6 +26,14 @@ a {
         outline: none !important;
         box-shadow: none !important;
     }
+}
+
+input.form-control::-webkit-input-placeholder {
+    color: #fff;
+}
+
+textarea.form-control::-webkit-input-placeholder {
+    color: #fff;
 }
 
 body {
