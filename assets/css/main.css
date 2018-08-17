@@ -4,14 +4,14 @@
   font-weight: 900; }
 
 @media (min-width: 1024px) {
-  .logo-menu-holder, .home, .home .video-slider, .home .login-social-icons-holder, .contact-us-desc-holder, .contact-us-desc-holder .wrapper, .services, .services .wrapper, .services .wrapper .tiles-holder ul, .services .wrapper .tiles-holder ul li, .services .wrapper .tiles-holder ul li .content, .projects, .projects .wrapper, .projects .wrapper .tiles-holder ul, .our-team, .our-team .wrapper, .our-team .wrapper .holder .slider-item, .project-form, .project-form .wrapper, .project-form .wrapper .holder .form-wrapper .dropdown-holder .selected-item, .map-info, .map-info .wrapper, .map-info .wrapper .holder .address-holder, .map-info .wrapper .holder .address-holder li {
+  .logo-menu-holder, .home, .home .fp-tableCell, .home .video-slider, .home .login-social-icons-holder, .contact-us-desc-holder, .contact-us-desc-holder .fp-tableCell, .contact-us-desc-holder .wrapper, .services, .services .fp-tableCell, .services .wrapper, .services .wrapper .tiles-holder ul, .services .wrapper .tiles-holder ul li, .services .wrapper .tiles-holder ul li .content, .projects, .projects .fp-tableCell, .projects .wrapper, .projects .wrapper .tiles-holder ul, .our-team, .our-team .fp-tableCell, .our-team .wrapper, .our-team .wrapper .holder .slider-item, .project-form, .project-form .fp-tableCell, .project-form .wrapper, .project-form .wrapper .holder .form-wrapper .dropdown-holder .selected-item, .map-info, .map-info .fp-tableCell, .map-info .wrapper, .map-info .wrapper .holder .address-holder, .map-info .wrapper .holder .address-holder li {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
     display: flex; } }
 @media (min-width: 768px) and (max-width: 1023px) {
-  .logo-menu-holder, .home, .home .video-slider, .home .login-social-icons-holder, .contact-us-desc-holder, .contact-us-desc-holder .wrapper, .services, .services .wrapper, .services .wrapper .tiles-holder ul, .services .wrapper .tiles-holder ul li, .services .wrapper .tiles-holder ul li .content, .projects, .projects .wrapper, .projects .wrapper .tiles-holder ul, .our-team, .our-team .wrapper, .our-team .wrapper .holder .slider-item, .project-form, .project-form .wrapper, .project-form .wrapper .holder .form-wrapper .dropdown-holder .selected-item, .map-info, .map-info .wrapper, .map-info .wrapper .holder .address-holder, .map-info .wrapper .holder .address-holder li {
+  .logo-menu-holder, .home, .home .fp-tableCell, .home .video-slider, .home .login-social-icons-holder, .contact-us-desc-holder, .contact-us-desc-holder .fp-tableCell, .contact-us-desc-holder .wrapper, .services, .services .fp-tableCell, .services .wrapper, .services .wrapper .tiles-holder ul, .services .wrapper .tiles-holder ul li, .services .wrapper .tiles-holder ul li .content, .projects, .projects .fp-tableCell, .projects .wrapper, .projects .wrapper .tiles-holder ul, .our-team, .our-team .fp-tableCell, .our-team .wrapper, .our-team .wrapper .holder .slider-item, .project-form, .project-form .fp-tableCell, .project-form .wrapper, .project-form .wrapper .holder .form-wrapper .dropdown-holder .selected-item, .map-info, .map-info .fp-tableCell, .map-info .wrapper, .map-info .wrapper .holder .address-holder, .map-info .wrapper .holder .address-holder li {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -825,14 +825,27 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 9;
   flex-direction: column;
   justify-content: space-between;
   align-items: center; }
-  .logo-menu-holder .menu-icon span {
-    display: block;
-    width: 35px;
-    height: 5px;
-    background: #d10556; }
+  .logo-menu-holder .menu-icon {
+    cursor: pointer; }
+    .logo-menu-holder .menu-icon:hover span:nth-child(2) {
+      -webkit-transform: translate3d(10px, 0, 0);
+      -moz-transform: translate3d(10px, 0, 0);
+      transform: translate3d(10px, 0, 0);
+      -webkit-transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+      -moz-transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+      transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1); }
+    .logo-menu-holder .menu-icon span {
+      display: block;
+      width: 35px;
+      height: 5px;
+      background: #d10556;
+      -webkit-transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+      -moz-transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+      transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1); }
 
 @-webkit-keyframes moveTagLine {
   0% {
@@ -860,6 +873,11 @@
   float: right;
   justify-content: space-between;
   align-items: center; }
+  .home .fp-tableCell {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0; }
   .home .video-slider {
     flex-basis: 95%;
     height: 80%;
@@ -970,6 +988,10 @@
   float: right;
   align-items: center;
   justify-content: center; }
+  .contact-us-desc-holder .fp-tableCell {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
   .contact-us-desc-holder .wrapper {
     flex-basis: 80%;
     height: 100vh;
@@ -1014,6 +1036,15 @@
   float: right;
   align-items: center;
   justify-content: flex-start; }
+  .services.active .wrapper .tiles-holder ul li.service-animate {
+    opacity: 1;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out; }
+  .services .fp-tableCell {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
   .services .wrapper {
     flex-basis: 96%;
     height: 100vh;
@@ -1042,6 +1073,11 @@
           position: relative;
           z-index: 0;
           overflow: hidden; }
+          .services .wrapper .tiles-holder ul li.service-animate {
+            opacity: 0;
+            -webkit-transition: all 2s ease-in-out;
+            -moz-transition: all 2s ease-in-out;
+            transition: all 2s ease-in-out; }
           .services .wrapper .tiles-holder ul li img {
             padding: 15px;
             width: 80px;
@@ -1109,6 +1145,10 @@
   float: right;
   align-items: center;
   justify-content: flex-start; }
+  .projects .fp-tableCell {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
   .projects .wrapper {
     flex-basis: 96%;
     justify-content: flex-start; }
@@ -1130,8 +1170,12 @@
   width: calc(100% - 190px);
   height: 100vh;
   float: right;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start; }
+  .our-team .fp-tableCell {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
   .our-team .wrapper {
     width: 96%;
     justify-content: flex-start; }
@@ -1215,6 +1259,10 @@
   float: right;
   align-items: center;
   justify-content: flex-start; }
+  .project-form .fp-tableCell {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
   .project-form .wrapper {
     flex-basis: 96%;
     height: 100%;
@@ -1333,6 +1381,10 @@
   height: 100vh;
   float: right;
   justify-content: flex-start; }
+  .map-info .fp-tableCell {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
   .map-info .wrapper {
     flex-basis: 96%;
     justify-content: flex-start; }

@@ -5,8 +5,28 @@
     @extend %disFlex;
     align-items: center;
     justify-content: flex-start;
+    &.active {
+        .wrapper {
+            .tiles-holder {
+                ul {
+                    li {
+                        &.service-animate {
+                            opacity: 1;
+                            @include transitions(all, 2s, ease-in-out);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .fp-tableCell {
+        @extend %disFlex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
     .wrapper {
-        flex-basis: 96%; 
+        flex-basis: 96%;
         height: 100vh;
         @extend %disFlex;
         justify-content: flex-start;
@@ -37,6 +57,10 @@
                     position: relative;
                     z-index: 0;
                     overflow: hidden;
+                    &.service-animate {
+                        opacity: 0;
+                        @include transitions(all, 2s, ease-in-out);
+                    }
                     img {
                         padding: 15px;
                         width: 80px;

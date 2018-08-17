@@ -4,6 +4,12 @@
     float: right;
     @extend %disFlex;
     justify-content: flex-start;
+    .fp-tableCell {
+        @extend %disFlex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
     .wrapper {
         flex-basis: 96%;
         @extend %disFlex;

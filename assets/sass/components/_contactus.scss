@@ -5,6 +5,12 @@
     @extend %disFlex;
     align-items: center;
     justify-content: center;
+    .fp-tableCell {
+        @extend %disFlex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
     .wrapper {
         flex-basis: 80%;
         height: 100vh;

@@ -6,6 +6,7 @@
         margin-left: -100%;
     }
 }
+
 @-moz-keyframes moveTagLine {
     0% {
         margin-left: 100%;
@@ -14,6 +15,7 @@
         margin-left: -100%;
     }
 }
+
 @-o-keyframes moveTagLine {
     0% {
         margin-left: 100%;
@@ -22,6 +24,7 @@
         margin-left: -100%;
     }
 }
+
 @keyframes moveTagLine {
     0% {
         margin-left: 100%;
@@ -38,6 +41,13 @@
     @extend %disFlex;
     justify-content: space-between;
     align-items: center;
+    .fp-tableCell {
+        @extend %disFlex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 40px 0;
+    }
     .video-slider {
         flex-basis: 95%;
         height: 80%;
