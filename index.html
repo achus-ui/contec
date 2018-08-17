@@ -197,27 +197,47 @@
 
     <section class="our-team">
         <div class="wrapper">
-            <!-- <div class="holder p-t-80 p-l-120 p-r-100"> -->
             <div class="holder p-t-80 p-l-120 p-r-100">
-                <div class="slider-item">
-                    <div class="info">
-                        <h2 class="m-b-60">Get to know us</h2>
-                        <p>As a Graphic Designer at Contec Digital, Magdalena specialises in many forms of graphic design for both on-line and
-                            print platforms. These include Branding, Creative Advertising, Responsive Web Design, Signage, Business Stationery,
-                            Logo and much more..
-                        </p>
-                        <p>She’s a firm believer in the power of design to drive innovation and loves nurturing ideas that lead to beautiful
-                            and intelligent designs. Her favourite part of the job is finding an unexpected, but just-right, solution for
-                            a client.</p>
-                        <p>Magdalena enjoys trying new sports (wake boarding, anyone?). When she’s not designing, you’ll typically find her
-                            travelling which gives her an opportunity to interact with new people and cultures. These special connections
-                            feed her creative spirit.</p>
-                        <ul>
-                            <li>team</li>
-                            <li>know me more</li>
-                        </ul>
+                <h2 class="m-b-60">Get to know us</h2>
+                <div class="our-team-slider owl-carousel">
+                    <div class="slider-item">
+                        <div class="info p-t-100">
+                            <p>As a Graphic Designer at Contec Digital, Magdalena specialises in many forms of graphic design for both on-line and
+                                print platforms. These include Branding, Creative Advertising, Responsive Web Design, Signage, Business Stationery,
+                                Logo and much more..
+                            </p>
+                            <p>She’s a firm believer in the power of design to drive innovation and loves nurturing ideas that lead to beautiful
+                                and intelligent designs. Her favourite part of the job is finding an unexpected, but just-right, solution for
+                                a client.</p>
+                            <p>Magdalena enjoys trying new sports (wake boarding, anyone?). When she’s not designing, you’ll typically find her
+                                travelling which gives her an opportunity to interact with new people and cultures. These special connections
+                                feed her creative spirit.</p>
+                            <ul>
+                                <li>team</li>
+                                <li>know me more</li>
+                            </ul>
+                        </div>
+                        <img src="assets/img/team/magdalena.jpg" class="img-fluid" alt="">
                     </div>
-                    <img src="assets/img/team/magdalena.jpg" class="img-fluid" alt="">
+                    <div class="slider-item">
+                        <div class="info p-t-100">
+                            <p>As a Graphic Designer at Contec Digital, Magdalena specialises in many forms of graphic design for both on-line and
+                                print platforms. These include Branding, Creative Advertising, Responsive Web Design, Signage, Business Stationery,
+                                Logo and much more..
+                            </p>
+                            <p>She’s a firm believer in the power of design to drive innovation and loves nurturing ideas that lead to beautiful
+                                and intelligent designs. Her favourite part of the job is finding an unexpected, but just-right, solution for
+                                a client.</p>
+                            <p>Magdalena enjoys trying new sports (wake boarding, anyone?). When she’s not designing, you’ll typically find her
+                                travelling which gives her an opportunity to interact with new people and cultures. These special connections
+                                feed her creative spirit.</p>
+                            <ul>
+                                <li>team</li>
+                                <li>know me more</li>
+                            </ul>
+                        </div>
+                        <img src="assets/img/team/magdalena.jpg" class="img-fluid" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -373,12 +393,15 @@
             duration: 1000,
             scale: 0.85
         });
-        var owl = $('.owl-carousel');
+        var owl = $('.our-team-slider');
         owl.owlCarousel({
             margin: 10,
             loop: false,
             items: 1,
+            nav: true
         });
+        owl.find('.owl-prev').html('<i class="fas fa-caret-left"></i>');
+        owl.find('.owl-next').html('<i class="fas fa-caret-right"></i>');
     </script>
     <script>
         function myMap() {

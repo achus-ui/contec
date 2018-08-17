@@ -1133,9 +1133,10 @@
   align-items: center;
   justify-content: flex-start; }
   .our-team .wrapper {
-    flex-basis: 96%;
+    width: 96%;
     justify-content: flex-start; }
     .our-team .wrapper .holder {
+      width: 100%;
       position: relative;
       background: #002541; }
       .our-team .wrapper .holder:before {
@@ -1146,27 +1147,51 @@
         position: absolute;
         bottom: 0;
         left: 0; }
+      .our-team .wrapper .holder h2 {
+        font-size: 40px;
+        font-weight: 300;
+        position: relative;
+        color: #ffffff;
+        position: absolute; }
+        .our-team .wrapper .holder h2:before {
+          content: "";
+          width: 40%;
+          height: 3px;
+          background: #ffffff;
+          position: absolute;
+          bottom: -20px;
+          left: 0; }
       .our-team .wrapper .holder .owl-carousel {
-        display: flex !important;
-        background: #002541; }
+        display: flex !important; }
+        .our-team .wrapper .holder .owl-carousel .owl-nav {
+          position: absolute;
+          top: 120px;
+          right: 0; }
+          .our-team .wrapper .holder .owl-carousel .owl-nav button {
+            outline: none; }
+          .our-team .wrapper .holder .owl-carousel .owl-nav .owl-prev {
+            margin-right: 1px; }
+          .our-team .wrapper .holder .owl-carousel .owl-nav i {
+            width: 80px;
+            height: 80px;
+            background: #013964;
+            font-size: 36px;
+            line-height: 80px;
+            color: #ffffff;
+            -webkit-transition: all 2s cubic-bezier(0.2, 1, 0.3, 1);
+            -moz-transition: all 2s cubic-bezier(0.2, 1, 0.3, 1);
+            transition: all 2s cubic-bezier(0.2, 1, 0.3, 1); }
+            .our-team .wrapper .holder .owl-carousel .owl-nav i:hover {
+              background: #0264b0;
+              -webkit-transition: all 2s cubic-bezier(0.2, 1, 0.3, 1);
+              -moz-transition: all 2s cubic-bezier(0.2, 1, 0.3, 1);
+              transition: all 2s cubic-bezier(0.2, 1, 0.3, 1); }
       .our-team .wrapper .holder .slider-item {
         position: relative;
         justify-content: space-between; }
         .our-team .wrapper .holder .slider-item .info {
           width: 50%;
           color: #ffffff; }
-          .our-team .wrapper .holder .slider-item .info h2 {
-            font-size: 40px;
-            font-weight: 300;
-            position: relative; }
-            .our-team .wrapper .holder .slider-item .info h2:before {
-              content: "";
-              width: 20%;
-              height: 3px;
-              background: #ffffff;
-              position: absolute;
-              bottom: -20px;
-              left: 0; }
           .our-team .wrapper .holder .slider-item .info p {
             font-size: 14px;
             font-family: 'Roboto Mono', monospace;
