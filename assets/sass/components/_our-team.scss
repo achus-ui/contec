@@ -45,8 +45,14 @@
             .owl-carousel {
                 display: flex !important;
                 height: 100%;
+                .owl-stage {
+                    height: 100%;
+                    .owl-item {
+                        height: 100%;
+                    }
+                }
                 .owl-nav {
-                    @include positioning(absolute, $top: 120px, $right: 0);
+                    @include positioning(absolute, $top: 119px, $right: 0);
                     button {
                         outline: none;
                     }
@@ -69,6 +75,7 @@
                 }
             }
             .slider-item {
+                height: 100%;
                 position: relative;
                 @extend %disFlex;
                 justify-content: space-between;
@@ -90,11 +97,35 @@
                         }
                     }
                 }
-                img {
-                    width: auto !important;
-                    height: 560px;
+                .img-holder {
                     align-self: flex-end;
-                    margin-top: 120px;
+                    position: relative;
+                    .name-desig {
+                        @extend %disFlex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        align-items: center;
+                        background: $primary-color;
+                        padding: 15px;
+                        @include positioning(absolute, $left: -180px, $bottom: 40px);
+                        color: $agent-color-1;
+                        p {
+                            margin: 0;
+                            font-family: 'Roboto Mono', monospace;
+                            font-weight: fontWeight(300);
+                            font-size: fontSize(4px);
+                            line-height: 20px;
+                            text-align: center;
+                            span {
+                                font-weight: fontWeight(0);
+                                font-size: fontSize(-2px);
+                            }
+                        }
+                    }
+                    img {
+                        width: auto !important;
+                        height: 560px;
+                    }
                 }
             }
         }

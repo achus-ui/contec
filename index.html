@@ -25,7 +25,7 @@
         <div style="width: 40px; height: 20px; background: #eee;"></div>
     </aside>
 
-    <section class="menus-holder home-bg">
+    <section id="menuHolder" class="menus-holder">
         <ul id="menus" class="menus">
             <li data-menuanchor="firstPage" class="active"><a href="#firstPage">home</a></li>
             <li data-menuanchor="secondPage"><a href="#secondPage">about</a></li>
@@ -90,6 +90,7 @@
                 <div class="chat-icon">
                     <img src="http://www.kpopmusic.com/wp-content/uploads/2015/09/t-o-p-profile-picture-759x500.jpg" alt="" class="chat">
                     <div class="chat-welcome">
+                        <i class="fas fa-times"></i>
                         Welcome back! Can I help you with anything?
                     </div>
                 </div>
@@ -254,7 +255,12 @@
                                     <li>know me more</li>
                                 </ul>
                             </div>
-                            <img src="assets/img/team/magdalena.jpg" class="img-fluid" alt="">
+                            <div class="img-holder">
+                                <div class="name-desig">
+                                    <p>Magdalena Ciesla <br><span>UI & Graphic Designer</span></p>
+                                </div>
+                                <img src="assets/img/team/magdalena.jpg" class="img-fluid" alt="">
+                            </div>
                         </div>
                         <div class="slider-item">
                             <div class="info p-t-100">
@@ -273,7 +279,15 @@
                                     <li>know me more</li>
                                 </ul>
                             </div>
-                            <img src="assets/img/team/magdalena.jpg" class="img-fluid" alt="">
+                            <div class="img-holder">
+                                <div class="name-desig">
+                                    <p>Magdalena Ciesla
+                                        <br>
+                                        <span>UI & Graphic Designer</span>
+                                    </p>
+                                </div>
+                                <img src="assets/img/team/magdalena.jpg" class="img-fluid" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -428,78 +442,6 @@
         crossorigin="anonymous"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $('#fullpage').fullpage({
-                navigation: false,
-                slidesNavigation: false,
-                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage'],
-                menu: '#menus',
-                lazyLoad: true
-            });
-            var owl = $('.our-team-slider');
-            owl.owlCarousel({
-                margin: 10,
-                loop: false,
-                items: 1,
-                nav: true
-            });
-            owl.find('.owl-prev').html('<i class="fas fa-caret-left"></i>');
-            owl.find('.owl-next').html('<i class="fas fa-caret-right"></i>');
-            var menuTrigger = $('.menu-icon');
-            menuTrigger.click(function() {
-                $(this).toggleClass('show-close');
-                $('.menus-holder').toggleClass('show-menus');
-            });
-            var menuItem = $('.menus li');
-            menuItem.mouseover(function(e) {
-                switch (e.target.innerHTML) {
-                    case 'about':
-                        $('.menus-holder').addClass('about-bg');                        
-                        break;
-                    case 'services':
-                        $('.menus-holder').addClass('services-bg');
-                        break;
-                    case 'latest work':
-                        $('.menus-holder').addClass('latest-work-bg');
-                        break;
-                    case 'meet the team':
-                        $('.menus-holder').addClass('meet-team-bg');
-                        break;
-                    case 'testimonials':
-                        $('.menus-holder').addClass('testomonials-bg');
-                        break;
-                    case 'contact':
-                        $('.menus-holder').addClass('contact-bg');
-                        break;
-                    default:
-                        break;
-                }
-            });
-            menuItem.mouseout(function (e) {
-                switch (e.target.innerHTML) {
-                    case 'about':
-                        $('.menus-holder').removeClass('about-bg');
-                        break;
-                    case 'services':
-                        $('.menus-holder').removeClass('services-bg');
-                        break;
-                    case 'latest work':
-                        $('.menus-holder').removeClass('latest-work-bg');
-                        break;
-                    case 'meet the team':
-                        $('.menus-holder').removeClass('meet-team-bg');
-                        break;
-                    case 'testimonials':
-                        $('.menus-holder').removeClass('testomonials-bg');
-                        break;
-                    case 'contact':
-                        $('.menus-holder').removeClass('contact-bg');
-                        break;
-                    default:
-                        break;
-                }
-            });
-        });
         function myMap() {
             var mapCanvas = document.getElementById("map");
             var mapOptions = {
@@ -508,8 +450,8 @@
             };
             var map = new google.maps.Map(mapCanvas, mapOptions);
         }
-        //define store some initial variables
     </script>
+    <script src="assets/js/main.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 </body>
 </html>
