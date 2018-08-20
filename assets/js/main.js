@@ -44,7 +44,7 @@ $(document).ready(function () {
                     break;
                 case 5:
                     $("#menuHolder").removeAttr('class');
-                    $('#menuHolder').addClass('menus-holder home-bg testomonials-bg');
+                    $('#menuHolder').addClass('menus-holder home-bg business-sectors-bg');
                     if ($('.menu-icon').hasClass('show-close')) {
                         $('.menu-icon').removeClass('show-close')
                     }
@@ -79,22 +79,28 @@ $(document).ready(function () {
     menuItem.mouseover(function (e) {
         switch (e.target.innerHTML) {
             case 'about':
-                $('#menuHolder').addClass('about-bg');
+                $("#menuHolder").removeAttr('class');
+                $('#menuHolder').addClass('menus-holder home-bg show-menus about-bg');
                 break;
             case 'services':
-                $('#menuHolder').addClass('services-bg');
+                $("#menuHolder").removeAttr('class');
+                $('#menuHolder').addClass('menus-holder home-bg show-menus services-bg');
                 break;
             case 'latest work':
-                $('#menuHolder').addClass('latest-work-bg');
+                $("#menuHolder").removeAttr('class');
+                $('#menuHolder').addClass('menus-holder home-bg show-menus latest-work-bg');
                 break;
             case 'meet the team':
-                $('#menuHolder').addClass('meet-team-bg');
+                $("#menuHolder").removeAttr('class');
+                $('#menuHolder').addClass('menus-holder home-bg show-menus meet-team-bg');
                 break;
-            case 'testimonials':
-                $('#menuHolder').addClass('testomonials-bg');
+            case 'business sectors':
+                $("#menuHolder").removeAttr('class');
+                $('#menuHolder').addClass('menus-holder home-bg show-menus business-sectors-bg');
                 break;
-            case 'contact':
-                $('#menuHolder').addClass('contact-bg');
+            case 'project form':
+                $("#menuHolder").removeAttr('class');
+                $('#menuHolder').addClass('menus-holder home-bg show-menus contact-bg');
                 break;
             default:
                 break;
@@ -114,10 +120,10 @@ $(document).ready(function () {
             case 'meet the team':
                 $('#menuHolder').removeClass('meet-team-bg');
                 break;
-            case 'testimonials':
-                $('#menuHolder').removeClass('testomonials-bg');
+            case 'business sectors':
+                $('#menuHolder').removeClass('business-sectors-bg');
                 break;
-            case 'contact':
+            case 'project form':
                 $('#menuHolder').removeClass('contact-bg');
                 break;
             default:

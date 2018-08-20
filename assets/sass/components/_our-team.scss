@@ -52,7 +52,7 @@
                     }
                 }
                 .owl-nav {
-                    @include positioning(absolute, $top: 119px, $right: 0);
+                    @include positioning(absolute, $bottom: 480px, $right: 0);
                     button {
                         outline: none;
                     }
