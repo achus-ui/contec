@@ -4,6 +4,8 @@
     float: right;
     @extend %disFlex;
     justify-content: flex-start;
+    position: relative;
+    z-index: 1;
     .fp-tableCell {
         @extend %disFlex;
         justify-content: space-between;

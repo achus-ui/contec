@@ -64,7 +64,7 @@ $(document).ready(function () {
     var owl = $('.our-team-slider');
     owl.owlCarousel({
         margin: 10,
-        loop: false,
+        loop: true,
         items: 1,
         nav: true
     });

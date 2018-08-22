@@ -1,36 +1,60 @@
 @-webkit-keyframes moveTagLine {
     0% {
-        margin-left: 100%;
+        transform: translateX(100%);
+    }
+    20% {
+        transform: translateX(80%);
+    }
+    80% {
+        transform: translateX(-80%);
     }
     100% {
-        margin-left: -120%;
+        transform: translateX(-120%);
     }
 }
 
 @-moz-keyframes moveTagLine {
     0% {
-        margin-left: 100%;
+        transform: translateX(100%);
+    }
+    20% {
+        transform: translateX(80%);
+    }
+    80% {
+        transform: translateX(-80%);
     }
     100% {
-        margin-left: -120%;
+        transform: translateX(-120%);
     }
 }
 
 @-o-keyframes moveTagLine {
     0% {
-        margin-left: 100%;
+        transform: translateX(100%);
+    }
+    20% {
+        transform: translateX(80%);
+    }
+    80% {
+        transform: translateX(-80%);
     }
     100% {
-        margin-left: -120%;
+        transform: translateX(-120%);
     }
 }
 
 @keyframes moveTagLine {
     0% {
-        margin-left: 100%;
+        transform: translateX(100%);
+    }
+    20% {
+        transform: translateX(80%);
+    }
+    80% {
+        transform: translateX(-80%);
     }
     100% {
-        margin-left: -120%;
+        transform: translateX(-120%);
     }
 }
 
@@ -144,7 +168,7 @@
                 background: $primary-color;
                 @include positioning(absolute, $left: -260px, $top: 0);
                 color: $agent-color-1;
-                font-size: fontSize(2px);
+                font-size: fontSize(-3px);
                 padding: 10px 10px 10px 30px;
                 font-weight: fontWeight(-100);
                 i {

@@ -93,7 +93,47 @@
                         padding: 0;
                         li {
                             display: inline-block;
-                            margin-right: 25px;
+                            margin-right: 75px;
+                            position: relative;
+                            cursor: pointer;
+                            &:hover {
+                                span {
+                                    width: 60px;
+                                    @include transitions(all, 0.3s, ease-in-out);
+                                    &:after {
+                                        opacity: 1;
+                                        @include transitions(all, 0.3s, ease-in-out);
+                                    }
+                                }
+                            }
+                            span {
+                                width: 30px;
+                                height: 2px;
+                                background: $agent-color-1;
+                                @include positioning(absolute, $bottom: 9px, $left: 110%);
+                                @include transitions(all, 0.3s, ease-in-out);
+                                &:after {
+                                    content: "";
+                                    width: 0;
+                                    height: 0;
+                                    border-style: solid;
+                                    border-width: 7px 0 7px 7px;
+                                    border-color: transparent transparent transparent $agent-color-1;
+                                    @include positioning(absolute, $top: -6px, $right: -4px);
+                                    opacity: 0;
+                                    @include transitions(all, 0.3s, ease-in-out);
+                                }
+                                &:hover {
+                                    span {
+                                        width: 60px;
+                                        @include transitions(all, 0.3s, ease-in-out);
+                                        &:after {
+                                            opacity: 1;
+                                            @include transitions(all, 0.3s, ease-in-out);
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }

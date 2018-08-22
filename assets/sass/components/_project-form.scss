@@ -68,6 +68,9 @@
                         background: $primary-color;
                         color: $agent-color-1;
                         cursor: pointer;
+                        i {
+                            color: $quinary-color;
+                        }
                         &.open {
                             &+.items {
                                 @include scale(1, 1, 1);

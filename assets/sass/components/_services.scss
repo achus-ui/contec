@@ -4,8 +4,9 @@
     float: right;
     @extend %disFlex;
     align-items: center;
-    justify-content: flex-start; // margin-bottom: 3px;
-    // margin-top: -1px;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 1;
     &.active {
         .wrapper {
             .tiles-holder {
@@ -33,7 +34,7 @@
         justify-content: flex-start;
         background: #fafafa;
         .tiles-holder {
-            height: 100%; 
+            height: 100%;
             background: #fafafa;
             position: relative;
             ul {
@@ -61,6 +62,7 @@
                     z-index: 0;
                     overflow: hidden;
                     color: $quinary-color;
+                    cursor: pointer;
                     &.service-animate {
                         opacity: 0;
                         @include transitions(all, 0.8s, ease-in-out);
@@ -101,6 +103,16 @@
                         .content {
                             button {
                                 color: $agent-color-1;
+                                @include transitions(all, 0.8s, ease-in-out);
+                                span {
+                                    width: 60px;
+                                    background: $agent-color-1;
+                                    @include transitions(all, 0.8s, ease-in-out);
+                                    &:after {
+                                        opacity: 1;
+                                        @include transitions(all, 0.8s, ease-in-out);
+                                    }
+                                }
                             }
                         }
                     }
@@ -126,6 +138,26 @@
                             color: $primary-color;
                             font-family: 'Roboto Mono', monospace;
                             font-weight: fontWeight(300);
+                            position: relative;
+                            @include transitions(all, 0.8s, ease-in-out);
+                            span {
+                                width: 30px;
+                                height: 2px;
+                                background: $primary-color;
+                                @include positioning(absolute, $bottom: 8px, $left: 110%);
+                                @include transitions(all, 0.8s, ease-in-out);
+                                &:after {
+                                    content: "";
+                                    width: 0;
+                                    height: 0;
+                                    border-style: solid;
+                                    border-width: 7px 0 7px 7px;
+                                    border-color: transparent transparent transparent $agent-color-1;
+                                    @include positioning(absolute, $top: -6px, $right: -4px);
+                                    opacity: 0;
+                                    @include transitions(all, 0.8s, ease-in-out);
+                                }
+                            }
                         }
                     }
                 }
