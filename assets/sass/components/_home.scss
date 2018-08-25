@@ -65,6 +65,9 @@
     @extend %disFlex;
     justify-content: space-between;
     align-items: center;
+    @include tablet {
+        width: calc(100% - 100px);
+    }
     .fp-tableCell {
         @extend %disFlex;
         justify-content: space-between;
@@ -92,89 +95,96 @@
             width: 65%;
             height: 100%;
             position: relative;
+            @include tablet {
+                width: 100%;
+            }
             .video-info {
                 width: 50%;
                 @include positioning(absolute, $top: 80px, $left: -70px);
                 z-index: 1;
-                p {
-                    font-size: fontSize(13px);
-                    line-height: 40px;
+                @include tablet {
+                    width: 90%;
+                    left: 0;
                 }
-                button.watch {
-                    float: right;
-                    background: transparent;
-                    border: 0;
-                    font-size: fontSize(2px);
-                    color: $quinary-color;
-                    font-weight: fontWeight(300);
-                    cursor: pointer;
-                    &:hover {
+                    p {
+                        font-size: fontSize(13px);
+                        line-height: 40px;
+                    }
+                    button.watch {
+                        float: right;
+                        background: transparent;
+                        border: 0;
+                        font-size: fontSize(2px);
+                        color: $quinary-color;
+                        font-weight: fontWeight(300);
+                        cursor: pointer;
+                        &:hover {
+                            i {
+                                @include transitions(all, 0.3s, cubic-bezier(.2, 1, .3, 1));
+                                margin-left: 25px;
+                            }
+                        }
                         i {
                             @include transitions(all, 0.3s, cubic-bezier(.2, 1, .3, 1));
-                            margin-left: 25px;
+                            margin-left: 10px;
                         }
                     }
-                    i {
+                }
+            }
+        }
+        .login-social-icons-holder {
+            @extend %disFlex;
+            flex-basis: 5%;
+            height: 100%;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            background-color: $agent-color-1;
+            a {
+                color: $primary-color;
+                font-family: 'Roboto Mono', monospace;
+                font-weight: fontWeight(300);
+                font-size: fontSize(0);
+                position: relative;
+                i {
+                    @include positioning(absolute, $top: 4px, $left: -30px);
+                }
+            }
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    text-align: center;
+                    cursor: pointer;
+                    @include transitions(all, 0.3s, cubic-bezier(.2, 1, .3, 1));
+                    @include translate(0, 0, 0);
+                    &:hover {
+                        @include translate(8px, 0, 0);
                         @include transitions(all, 0.3s, cubic-bezier(.2, 1, .3, 1));
-                        margin-left: 10px;
+                    }
+                }
+            }
+            .chat-icon {
+                position: relative;
+                img {
+                    width: 60px;
+                    height: 60px;
+                    @include border-radius(50%);
+                    object-fit: cover;
+                }
+                .chat-welcome {
+                    width: 250px;
+                    background: $primary-color;
+                    @include positioning(absolute, $left: -260px, $top: 0);
+                    color: $agent-color-1;
+                    font-size: fontSize(-3px);
+                    padding: 10px 10px 10px 30px;
+                    font-weight: fontWeight(-100);
+                    i {
+                        @include positioning(absolute, $left: 10px, $top: 14px);
                     }
                 }
             }
         }
     }
-    .login-social-icons-holder {
-        @extend %disFlex;
-        flex-basis: 5%;
-        height: 100%;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
-        background-color: $agent-color-1;
-        a {
-            color: $primary-color;
-            font-family: 'Roboto Mono', monospace;
-            font-weight: fontWeight(300);
-            font-size: fontSize(0);
-            position: relative;
-            i {
-                @include positioning(absolute, $top: 4px, $left: -30px);
-            }
-        }
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            li {
-                text-align: center;
-                cursor: pointer;
-                @include transitions(all, 0.3s, cubic-bezier(.2, 1, .3, 1));
-                @include translate(0, 0, 0);
-                &:hover {
-                    @include translate(8px, 0, 0);
-                    @include transitions(all, 0.3s, cubic-bezier(.2, 1, .3, 1));
-                }
-            }
-        }
-        .chat-icon {
-            position: relative;
-            img {
-                width: 60px;
-                height: 60px;
-                @include border-radius(50%);
-                object-fit: cover;
-            }
-            .chat-welcome {
-                width: 250px;
-                background: $primary-color;
-                @include positioning(absolute, $left: -260px, $top: 0);
-                color: $agent-color-1;
-                font-size: fontSize(-3px);
-                padding: 10px 10px 10px 30px;
-                font-weight: fontWeight(-100);
-                i {
-                    @include positioning(absolute, $left: 10px, $top: 14px);
-                }
-            }
-        }
-    }
-}

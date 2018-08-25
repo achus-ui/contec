@@ -7,6 +7,9 @@
     justify-content: flex-start;
     position: relative;
     z-index: 1;
+    @include tablet {
+        width: calc(100% - 100px);
+    }
     &.active {
         .wrapper {
             .tiles-holder {
@@ -37,6 +40,9 @@
             height: 100%;
             background: #fafafa;
             position: relative;
+            @include tablet {
+                padding: 15px 10px !important;
+            }
             ul {
                 height: 100%;
                 margin: 0;
@@ -63,14 +69,25 @@
                     overflow: hidden;
                     color: $quinary-color;
                     cursor: pointer;
+                    @include tablet {
+                        flex: 1 0 calc(33.33% - 10px);
+                        flex-grow: 1;
+                        padding: 5px 10px;
+                        height: 20%;
+                    }
                     &.service-animate {
-                        opacity: 0;
+                        opacity: 1;
                         @include transitions(all, 0.8s, ease-in-out);
                     }
                     img {
                         padding: 15px;
                         width: 80px;
                         height: 80px;
+                        @include tablet {
+                            width: 50px;
+                            height: 50px;
+                            padding: 5px;
+                        }
                     }
                     &:before {
                         content: "";
@@ -126,9 +143,15 @@
                         h6 {
                             font-size: fontSize(0);
                             font-weight: fontWeight(300);
+                            @include tablet {
+                                font-size: fontSize(-2px);
+                            }
                         }
                         p {
                             font-size: fontSize(-2px);
+                            @include tablet {
+                                font-size: fontSize(-6px);
+                            }
                         }
                         button {
                             background: transparent;

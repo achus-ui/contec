@@ -6,6 +6,9 @@
     justify-content: flex-start;
     position: relative;
     z-index: 1;
+    @include tablet {
+        width: calc(100% - 100px);
+    }
     .fp-tableCell {
         @extend %disFlex;
         justify-content: space-between;
@@ -40,9 +43,17 @@
                     @extend %disFlex;
                     justify-content: space-between;
                     flex-direction: column;
+                    @include tablet {
+                        font-size: fontSize(-4px);
+                        justify-content: flex-start;
+                        margin: 0 10px;
+                    }
                     h6 {
                         font-weight: fontWeight(0);
                         font-size: fontSize(2px);
+                        @include tablet {
+                            font-size: fontSize(-2px)
+                        }
                     }
                 }
             }

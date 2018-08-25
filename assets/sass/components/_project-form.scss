@@ -5,6 +5,9 @@
     @extend %disFlex;
     align-items: center;
     justify-content: flex-start;
+    @include tablet {
+        width: calc(100% - 100px);
+    }
     .fp-tableCell {
         @extend %disFlex;
         justify-content: space-between;
@@ -20,6 +23,11 @@
             width: 100%;
             position: relative;
             background: #fafafa url(../img/contec-tag-animation.png) center bottom no-repeat;
+            @include tablet {
+                background-position: center 90%;
+                padding: 20px !important;
+                background-size: contain;
+            }
             .copyright {
                 @include positioning(absolute, $left: 135px, $bottom: 0);
                 font-weight: fontWeight(0);
