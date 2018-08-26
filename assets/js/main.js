@@ -6,6 +6,7 @@ $(document).ready(function () {
             slidesNavigation: false,
             anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage'],
             menu: '#menus',
+            responsiveHeight: 600,
             afterLoad: function (anchorLink, index, slideAnchor, slideIndex) {
                 switch (index.index) {
                     case 0:
@@ -61,7 +62,7 @@ $(document).ready(function () {
                         break;
                 }
             },
-        }); 
+        });
     }
     // $('#section2 ul li .content p').ellipsis({ lines: 3 }); 
     let owl = $('.our-team-slider');
