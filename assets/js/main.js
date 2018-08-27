@@ -1,12 +1,12 @@
 $(document).ready(function () {
-    if (window.visualViewport.width > 1025) {
+    if($(window).width() > 1025) {
         $('#fullpage').fullpage({
             licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
             navigation: false,
             slidesNavigation: false,
-            anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage'],
+            // anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage'],
+            anchors: ['firstPage'],
             menu: '#menus',
-            responsiveHeight: 600,
             afterLoad: function (anchorLink, index, slideAnchor, slideIndex) {
                 switch (index.index) {
                     case 0:

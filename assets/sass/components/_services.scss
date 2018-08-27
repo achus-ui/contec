@@ -9,6 +9,7 @@
     z-index: 1;
     @include tablet {
         width: calc(100% - 100px);
+        height: 100vh;
     }
     &.active {
         .wrapper {

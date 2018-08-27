@@ -63,3 +63,11 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: fontWeight(0);
 }
+
+#fullpage {
+    @include tablet {
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}

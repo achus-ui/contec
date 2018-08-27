@@ -7,6 +7,7 @@
     @include tablet {
         justify-content: flex-start;
         width: calc(100% - 100px);
+        height: 100vh;
     }
     .fp-tableCell {
         @extend %disFlex;
