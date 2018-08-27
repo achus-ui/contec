@@ -4,8 +4,7 @@ $(document).ready(function () {
             licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
             navigation: false,
             slidesNavigation: false,
-            // anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage'],
-            anchors: ['firstPage'],
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage'],
             menu: '#menus',
             afterLoad: function (anchorLink, index, slideAnchor, slideIndex) {
                 switch (index.index) {
@@ -137,6 +136,21 @@ $(document).ready(function () {
                 break;
             default:
                 break;
+        }
+    });
+    // Dropdown for form
+    let dropDownHolder = $('.dropdown-holder');
+    dropDownHolder.click(function() {
+        $(this).find('.selected-item').toggleClass('open'); 
+    });
+    dropDownHolder.find('.items li').click(function() {
+        $(this).parent().prev().find('span').text($(this).text());
+        dropDownHolder.find('.items li').removeClass('active');
+        $(this).addClass('active');
+    });
+    $(document).mouseup(function (e) {
+        if (!dropDownHolder.is(e.target) && dropDownHolder.has(e.target).length === 0) {
+            dropDownHolder.find('.selected-item').removeClass('open');
         }
     });
 });
