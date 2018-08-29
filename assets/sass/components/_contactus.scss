@@ -71,6 +71,8 @@
             align-items: flex-end;
             img {
                 height: 420px;
+                position: relative;
+                top: -1px;
                 @include tablet {
                     height: 230px;
                 }

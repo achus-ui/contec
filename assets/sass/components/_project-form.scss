@@ -1,3 +1,87 @@
+@keyframes moveTagLine {
+    0% {
+        transform: translateX(100%);
+    }
+    20% {
+        transform: translateX(80%);
+    }
+    40% {
+        transform: translateX(60%);
+    }
+    60% {
+        transform: translateX(40%);
+    }
+    80% {
+        transform: translateX(20%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@-moz-keyframes moveTagLine {
+    0% {
+        transform: translateX(100%);
+    }
+    20% {
+        transform: translateX(80%);
+    }
+    40% {
+        transform: translateX(60%);
+    }
+    60% {
+        transform: translateX(40%);
+    }
+    80% {
+        transform: translateX(20%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@-o-keyframes moveTagLine {
+    0% {
+        transform: translateX(100%);
+    }
+    20% {
+        transform: translateX(80%);
+    }
+    40% {
+        transform: translateX(60%);
+    }
+    60% {
+        transform: translateX(40%);
+    }
+    80% {
+        transform: translateX(20%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes moveTagLine {
+    0% {
+        transform: translateX(100%);
+    }
+    20% {
+        transform: translateX(80%);
+    }
+    40% {
+        transform: translateX(60%);
+    }
+    60% {
+        transform: translateX(40%);
+    }
+    80% {
+        transform: translateX(20%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
 .project-form {
     width: calc(100% - 190px);
     height: 100vh;
@@ -22,8 +106,18 @@
         justify-content: flex-start;
         .holder {
             width: 100%;
-            position: relative;
-            background: #fafafa url(../img/contec-tag-animation.png) center bottom no-repeat;
+            position: relative; // background: #fafafa url(../img/contec-tag-animation.png) center bottom no-repeat;
+            background: #fafafa;
+            overflow-x: hidden;
+            .tag-animation {
+                height: 460px;
+                @include positioning(absolute, $bottom: 0);
+                z-index: 0;
+                -webkit-animation: moveTagLine 90s linear infinite;
+                -moz-animation: moveTagLine 90s linear infinite;
+                -o-animation: moveTagLine 90s linear infinite;
+                animation: moveTagLine 90s linear infinite;
+            }
             @include tablet {
                 background-position: center 90%;
                 padding: 20px !important;
