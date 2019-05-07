@@ -2,11 +2,11 @@
     {
         "emailPref": [
             {
-                "allowLetters": true,
-                "sellerReview": true,
-                "appointmentConfirmation": false,
-                "previewEmail": true,
-                "websiteEmail": false
+                "allowLetters": "Subscribed",
+                "sellerReview": "Unsubscribed",
+                "appointmentConfirmation": "Subscribed",
+                "previewEmail": "Subscribed",
+                "websiteEmail": "Unsubscribed"
             }
         ]
     }
