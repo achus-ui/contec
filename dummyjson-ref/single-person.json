@@ -1,0 +1,13 @@
+[
+    {
+        "emailPref": [
+            {
+                "allowLetters": true,
+                "sellerReview": true,
+                "appointmentConfirmation": false,
+                "previewEmail": true,
+                "websiteEmail": false
+            }
+        ]
+    }
+]
