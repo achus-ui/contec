@@ -1,7 +1,7 @@
 {
     "marketExclusions": [
         {
-            "telephoneMarketing": "Subscribe",
+            "telephoneMarketing": "Subscribed",
             "marketingByPost": "Unsubscribed"
         }
     ]
