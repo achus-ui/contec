@@ -1,0 +1,53 @@
+{
+    "salutation": "Mr",
+    "firstName": "Manu",
+    "lastName": "Vasudev",
+    "designation": "Customer Support",
+    "dob": "Tue May 07 2019 03:06:39 GMT+0530 (India Standard Time)",
+    "idType": "DL",
+    "consent": "Lorem",
+    "postCode": "569fgfrt",
+    "postalAddress": "12 Lowlands Lea, Heanor Derbyshire DE75 7SX",
+    "email": "manu@manu.com",
+    "homePhone": "455585566",
+    "workPhone": "785599699",
+    "mobilePhone": "1111785598",
+    "fax": "SDD144558",
+    "contactNotes": "Lorem Ipsume",
+    "recentUpdates": [
+        {
+          "time": "2 mintues ago",
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "succes"
+        },
+        {
+          "time": "50 mintues ago",
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "danger"
+        },
+        {
+          "time": "Thu May 09 2019 14:30:29 GMT+0530 (India Standard Time)",
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "info"
+        },
+        {
+          "time": "Thu May 09 2019 14:30:29 GMT+0530 (India Standard Time)",
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "warning"
+        }
+      ],
+      "otherInformation": [
+        {
+          "type": "Groups",
+          "content": "Lorem Ipsume Codndfdn efdsot sa"
+        },
+        {
+          "type": "Something Else",
+          "content": "Lorem Ipsume Codndfdn efdsot sa"
+        },
+        {
+          "type": "What If",
+          "content": "Lorem Ipsume Codndfdn efdsot sa"
+        }
+      ]
+}
