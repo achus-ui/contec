@@ -1,0 +1,14 @@
+{
+    "electronicMarketing": [
+        {
+            "mainIncludeExclude": "Include Email Marketing",
+            "emailProductMarketing": "Subscribed",
+            "emailNewsletter": "Subscribed",
+            "investmentNewsletter": "Subscribed",
+            "landlordNewsletter": "Subscribed",
+            "conveyancing": "Subscribed",
+            "generalInsurance": "Subscribed",
+            "mortgages": "Subscribed"
+        }
+    ]
+}
