@@ -60,19 +60,23 @@
       "recentUpdates": [
         {
           "time": "2 mintues ago",
-          "content": "Lorem Ipsume Codndfdn efdsot sa"
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "warning"
         },
         {
           "time": "50 mintues ago",
-          "content": "Lorem Ipsume Codndfdn efdsot sa"
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "warning"
         },
         {
           "time": "Thu May 09 2019 14:30:29 GMT+0530 (India Standard Time)",
-          "content": "Lorem Ipsume Codndfdn efdsot sa"
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "warning"
         },
         {
           "time": "Thu May 09 2019 14:30:29 GMT+0530 (India Standard Time)",
-          "content": "Lorem Ipsume Codndfdn efdsot sa"
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "warning"
         }
       ]
     },
@@ -96,19 +100,23 @@
       "recentUpdates": [
         {
           "time": "2 mintues ago",
-          "content": "Lorem Ipsume Codndfdn efdsot sa"
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "danger"
         },
         {
           "time": "50 mintues ago",
-          "content": "Lorem Ipsume Codndfdn efdsot sa"
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "info"
         },
         {
           "time": "Thu May 09 2019 14:30:29 GMT+0530 (India Standard Time)",
-          "content": "Lorem Ipsume Codndfdn efdsot sa"
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "danger"
         },
         {
           "time": "Thu May 09 2019 14:30:29 GMT+0530 (India Standard Time)",
-          "content": "Lorem Ipsume Codndfdn efdsot sa"
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "success"
         }
       ]
     },
@@ -132,19 +140,23 @@
       "recentUpdates": [
         {
           "time": "2 mintues ago",
-          "content": "Lorem Ipsume Codndfdn efdsot sa"
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "info"
         },
         {
           "time": "50 mintues ago",
-          "content": "Lorem Ipsume Codndfdn efdsot sa"
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "danger"
         },
         {
           "time": "Thu May 09 2019 14:30:29 GMT+0530 (India Standard Time)",
-          "content": "Lorem Ipsume Codndfdn efdsot sa"
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "warning"
         },
         {
           "time": "Thu May 09 2019 14:30:29 GMT+0530 (India Standard Time)",
-          "content": "Lorem Ipsume Codndfdn efdsot sa"
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "success"
         }
       ]
     },
@@ -168,19 +180,23 @@
       "recentUpdates": [
         {
           "time": "2 mintues ago",
-          "content": "Lorem Ipsume Codndfdn efdsot sa"
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "warning"
         },
         {
           "time": "50 mintues ago",
-          "content": "Lorem Ipsume Codndfdn efdsot sa"
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "info"
         },
         {
           "time": "Thu May 09 2019 14:30:29 GMT+0530 (India Standard Time)",
-          "content": "Lorem Ipsume Codndfdn efdsot sa"
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "warning"
         },
         {
           "time": "Thu May 09 2019 14:30:29 GMT+0530 (India Standard Time)",
-          "content": "Lorem Ipsume Codndfdn efdsot sa"
+          "content": "Lorem Ipsume Codndfdn efdsot sa",
+          "type": "warning"
         }
       ]
     }
