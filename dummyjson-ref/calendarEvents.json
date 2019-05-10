@@ -1,0 +1,38 @@
+[
+    {
+      "start": "Fri May 10 2019 14:28:54 GMT+0530 (India Standard Time)",
+      "end": "Fri May 10 2019 14:28:54 GMT+0530 (India Standard Time)",
+      "title": "Some Events On the Day",
+      "color": "#ff0000",
+      "allDay": true,
+      "resizable": {
+        "beforeStart": true,
+        "afterEnd": true
+        },
+      "draggable": true
+    },
+    {
+      "start": "Fri May 10 2019 14:28:54 GMT+0530 (India Standard Time)",
+      "end": "Fri May 10 2019 14:28:54 GMT+0530 (India Standard Time)",
+      "title": "Hey thats the event today",
+      "color": "#ff0000",
+      "allDay": true,
+      "resizable": {
+        "beforeStart": true,
+        "afterEnd": true
+        },
+      "draggable": true
+    },
+    {
+      "start": "Fri May 10 2019 14:28:54 GMT+0530 (India Standard Time)",
+      "end": "Fri May 10 2019 14:28:54 GMT+0530 (India Standard Time)",
+      "title": "Some Another Events On the Day",
+      "color": "#ff0000",
+      "allDay": true,
+      "resizable": {
+        "beforeStart": true,
+        "afterEnd": true
+        },
+      "draggable": true
+    }
+]
